@@ -1,0 +1,54 @@
+<ion-header class="ion-no-border" translucent>
+  <ion-toolbar color="primary" no-border>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>
+      Paiement
+    </ion-title>
+
+    <ion-buttons slot="end">
+      
+    </ion-buttons>
+    
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ 
+ 
+  <div class="container center"  >
+  
+    <div class="card" >
+      <h2>
+        <div class="banner">
+          <img src="../../assets/card.jpg" />
+        </div> 
+      </h2>
+      <hr/>
+      <p>
+        <ion-list >
+              
+          
+            <ion-item>
+              <ion-label> Num carte : </ion-label>
+              <ion-input placeholder="xxxx-xxxx-xxxx-xxxx"></ion-input>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label> Code : </ion-label>
+              <ion-input placeholder="xx-xx-xx"></ion-input>
+            </ion-item>
+  
+        </ion-list>
+      </p>
+      <div class="button-margin">
+        <button (click)="bookTicket()">Valider</button>
+        
+      </div>
+      
+    </div>
+  </div>
+</ion-content>

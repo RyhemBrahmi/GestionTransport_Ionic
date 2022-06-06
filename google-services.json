@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "286426788091",
+    "firebase_url": "https://gestiontr-fbb95-default-rtdb.firebaseio.com",
+    "project_id": "gestiontr-fbb95",
+    "storage_bucket": "gestiontr-fbb95.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286426788091:android:2cf48627cc2b1146f3805e",
+        "android_client_info": {
+          "package_name": "com.gestiontransport.tn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286426788091-6s8ot2ck7nmcu3b8mn0mca48dqan0q8e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAx9WVt4Rpgp1fPPXMwWGzMOfUPI5Q_t9s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286426788091-6s8ot2ck7nmcu3b8mn0mca48dqan0q8e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

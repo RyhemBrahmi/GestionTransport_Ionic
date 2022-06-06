@@ -1,0 +1,235 @@
+
+
+<ion-content [fullscreen]="true">
+  <div class="banner">
+    <img src="../../assets/bannerr.jpg" />
+    <!--
+ -->
+     </div>
+  
+ 
+       
+  <!--   <div class="caption ion-padding">
+     
+    </div>
+    <div class="search">
+      <ion-item lines="none" class="ion-no-padding">
+        <ion-icon slot="start" name="search-outline"></ion-icon>
+        <ion-input placeholder="Rechercher"></ion-input>
+                  
+     </ion-item>
+    </div>-->
+          <!-- 
+             <ion-button slot='end'><img src="../../assets/filter.svg" /> </ion-button>
+          -->
+        
+ 
+
+  <div class="title">
+    <h2>Les voyages</h2>
+    <a routerLink="/tickets"><p>Voir plus</p></a>
+      
+    <!-- <a href="/tickets"><p>Voir plus</p></a>-->
+    
+  </div>
+
+  <div class="event-slider" >
+    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }" class="default-left-padding">
+      <ion-slide  *ngFor="let item of searchedItem">
+        <ion-col class="ion-text-left">
+          <ion-card>
+            <ion-card-header class="ion-no-padding">
+
+              <!--              <img src="../../assets/events/event1.svg" />
+                 <img src="../../assets/bus2.jpg" />
+-->              
+          <img src="../../assets/bus3.jpg" />
+
+            </ion-card-header>
+
+            <ion-card-content >
+              <h2 class="eventname">Ligne : {{item.ligne}}</h2>
+               <p class="location">
+                 <ion-icon name="location"></ion-icon>
+                <ion-label position="fixed">Station Départ : {{ item.stationdepart }}</ion-label>
+                
+              </p>
+              <p class="location">
+                
+                <ion-icon name="location"></ion-icon>
+                <ion-label position="fixed">Station arrivée : {{ item.stationarrivee }}</ion-label>
+              </p>
+              <p class="date"> <ion-icon name="time-outline"></ion-icon> Heure départ : {{ item.heuredepart }}</p>
+              <p class="date"> <ion-icon name="time"></ion-icon> Heure arrivée : {{ item.heurearrivee }}</p>
+              <p class="date">$Tarif : {{ item.tarifs }}</p>
+             
+           
+
+              <div class="additional-info">
+                <div class="attendees">
+                  <ion-label position="fixed">Place disponible : {{ item.nombreplacedisponible }} </ion-label>
+                  
+                  <br>
+                  <ion-label position="fixed">Place réservée : {{ item.nombreplacereservee }}</ion-label>
+                </div>
+                  <div class="count">
+                    <p></p>
+                  </div>
+                  <!-- <div class="button-margin">
+                    <button (click)="ticket(item)" >Select</button>
+                  </div> -->
+                 
+                  <div class="container-button">
+                    <div class="center-button">
+                      <button (click)=" ticket(item)" >Select</button>
+                    </div>
+                  </div>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-slide>
+      
+    </ion-slides>
+  </div>
+ 
+  <!-- <ion-button (click)="Retour()">Retour</ion-button> -->
+</ion-content>
+
+<!--     
+  <ion-slide>
+        <ion-col class="ion-text-left">
+          <ion-card>
+            <ion-card-header class="ion-no-padding">
+
+            <img src="../../assets/bus.jpg" />
+
+            </ion-card-header>
+
+            <ion-card-content>
+              <h2 class="eventname">Ligne</h2>
+              <p class="location">
+                <ion-icon name="location"></ion-icon>
+               <ion-label position="fixed">Station Départ</ion-label>
+               
+             </p>
+             <p class="location">
+               
+               <ion-icon name="location"></ion-icon>
+               <ion-label position="fixed">Station arrivée</ion-label>
+             </p>
+             <p class="date">$Tarif</p>
+            
+          
+
+             <div class="additional-info">
+               <div class="attendees">
+                 <ion-label position="fixed">Place disponible</ion-label>
+                
+                 <br>
+                 <ion-label position="fixed">Place réservée</ion-label>
+               </div>
+                <div class="count">
+                   <p></p>
+                 </div>
+                 <div class="button-margin">
+                  <button (click)="ticket()" >Select</button>
+                </div>
+             </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-slide>
+      <ion-slide>
+        <ion-col class="ion-text-left">
+          <ion-card>
+            <ion-card-header class="ion-no-padding">
+
+  
+           
+          <img src="../../assets/bus.jpg" />
+
+            </ion-card-header>
+
+            <ion-card-content>
+              <h2 class="eventname">Ligne</h2>
+               <p class="location">
+                 <ion-icon name="location"></ion-icon>
+                <ion-label position="fixed">Station Départ</ion-label>
+                
+              </p>
+              <p class="location">
+                
+                <ion-icon name="location"></ion-icon>
+                <ion-label position="fixed">Station arrivée</ion-label>
+              </p>
+              <p class="date">$Tarif</p>
+             
+           
+
+              <div class="additional-info">
+                <div class="attendees">
+                  <ion-label position="fixed">Place disponible</ion-label>
+                  
+                  <br>
+                  <ion-label position="fixed">Place réservée</ion-label>
+                </div>
+                  <div class="count">
+                    <p></p>
+                  </div>
+                  <div class="button-margin">
+                    <button (click)="ticket()" >Select</button>
+                  </div>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-slide>
+-->
+
+
+
+
+
+   <!--
+     <div class="default-top-padding title">
+    <h2>Live right now</h2>
+
+    <p>See all</p>
+  </div>
+
+  <div class="live-event">
+    <img src="../../assets/events/event3.svg" />
+
+    <div class="info">
+      <div class="content">
+        <h6>World Art Day</h6>
+
+        <p class="stats">
+          <span><ion-icon name="eye"></ion-icon>&nbsp;2.3K</span><span><ion-icon name="heart"></ion-icon>&nbsp;3758</span>
+        </p>
+
+        <p class="location"><ion-icon name='location'></ion-icon>Caracas, Venezuela</p>
+
+        <div class="additional-info">
+          <div class="attendees">
+            <img src="../../assets/persons/person1.svg" />
+            <img src="../../assets/persons/person2.svg" />
+            <img src="../../assets/persons/person3.svg" />
+            <img src="../../assets/persons/person4.svg" />
+            <div class="count">
+              <img src="../../assets/persons/person-placeholder.svg" />
+
+              <p>+3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="indicator">
+        <div>Live</div>
+      </div>
+    </div>
+  </div>
+   -->
+  

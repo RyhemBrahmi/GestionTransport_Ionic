@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>imprimepdf</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="card" #contentToConvert id="contentToConvert">
+    <h2>Ligne : {{ voyageData.voyage.ligne }}  </h2>
+    <hr/>
+   
+      <div class="display"> 
+            
+        <ion-label position="fixed" class="font-place"> Ticket id  : {{ voyageData.ticket.ticketId }} </ion-label> <br>
+
+          <ion-label position="fixed" class="font">  <ion-icon name="location-outline"></ion-icon> Station départ :  {{ voyageData.voyage.stationdepart }}  </ion-label>
+          <br>
+  
+          
+          <ion-label position="fixed" class="font" > <ion-icon name="location"></ion-icon>
+            Ville arrivée: {{ voyageData.voyage.stationarrivee }}  </ion-label> <br>
+       
+          <div class="tarif">
+            <ion-label position="fixed" class="font"> <ion-icon name="time-outline"></ion-icon>
+              Heure départ : {{ voyageData.voyage.heurearrivee }}    </ion-label> <br>
+              <ion-label position="fixed" class="font"> <ion-icon name="time"></ion-icon>
+              Heure arrivée : {{ voyageData.voyage.heuredepart }}   </ion-label> <br>  
+           </div>
+         <div class="tarif">
+          <ion-label position="fixed" class="font-tarif"> <ion-icon name="logo-usd"></ion-icon>
+            Tarif : {{ voyageData.ticket.ticket.price }}  DT </ion-label> <br>
+         </div>
+      
+          <ion-label position="fixed" class="font-place"> Passager  : {{ voyageData.ticket.ticket.clientData.voyagerType }} </ion-label> <br>
+
+       
+       </div>
+   
+    
+  </div>
+
+  
+  <div class="container-button">
+      <div class="center-button">
+        <button (click)="convertToPDF()">Télécharger</button>
+      </div>
+    </div> 
+
+    
+</ion-content>

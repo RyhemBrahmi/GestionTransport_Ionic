@@ -1,0 +1,148 @@
+<ion-header class="ion-no-border" translucent>
+  <ion-toolbar color="primary" no-border>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>
+      Mon Voyage
+    </ion-title>
+
+    <ion-buttons slot="end">
+      
+    </ion-buttons>
+    
+  </ion-toolbar>
+
+</ion-header>
+<!-- <ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mon Voyage</ion-title>
+  </ion-toolbar>
+</ion-header>-->
+
+<ion-content [fullscreen]="true">
+ 
+  <!--  <div class="banner">
+    <img src="../../assets/ticket.jpg" />
+  </div> -->
+  <div class="container center" >
+  
+    <div class="card" >
+      <!-- -->
+      <div class="banner">
+        <img src="../../assets/ticket.jpg" />
+      </div> 
+      <hr/>
+    <div class="display">
+       
+              
+      <div class="font-margin">
+        <div class="ligne">
+
+    
+        <ion-label class="font-ligne"> Ligne : {{ voyageData.ligne }}  </ion-label>
+     
+<br>    </div>
+              <ion-label class="font"> <ion-icon name="location-outline"></ion-icon> Ville départ : {{ voyageData.stationdepart }}</ion-label> <br>
+            </div>
+        
+             <div class="font-margin">
+              <ion-label class="font"> <ion-icon name="location"></ion-icon> Ville arrivée : {{ voyageData.stationarrivee }}</ion-label> <br>
+            </div>
+            <div class="font-margin">
+              <ion-label class="font-heure"> <ion-icon name="time-outline"></ion-icon> Heure départ : {{ voyageData.heuredepart }} </ion-label> <br>
+
+            </div>
+            <div class="font-margin">
+              <ion-label class="font-heure"> <ion-icon name="time"></ion-icon> Heure arrivée : {{ voyageData.heurearrivee }} </ion-label> <br>
+
+            </div>
+              <div class="font-margin">
+              <ion-label class="font-tarif"> <ion-icon name="logo-usd"></ion-icon> Tarif : {{ voyageData.tarifs }} DT </ion-label>
+            </div>
+     <!-- exemple Radio button --> 
+     <div class="radio-list"> 
+      <ion-label class="font1" > Passager :</ion-label>
+       
+
+      <ion-radio-group [(ngModel)]="pickedPassagerType" name="passagerType" (ionChange)="onchange($event)">
+
+        <div *ngFor="let passager of passagerTypes" class="radio-button">
+          
+          <div class="margin-radio"> <ion-radio  slot="start" color="primary" [value]="passager"></ion-radio></div>
+
+         <div class="margin-radio"><ion-label class="font1">{{passager.voyagerType}}</ion-label>   </div> 
+     
+        </div>
+      </ion-radio-group>
+ 
+      
+
+    </div>
+
+
+
+
+         <!-- Radio in a List -->
+
+         <!-- <div class="radio-list">
+          
+            <ion-label class="font1" > Passager :</ion-label>
+        
+          <ion-radio-group value="biff" class="radio-list">        
+            <div class="display-radio">
+             <div class="margin-radio">  <ion-radio slot="start" value="majeur"></ion-radio> </div>
+             <div class="margin-radio"> <ion-label class="font1">Majeur</ion-label> </div>
+              
+              
+            </div>
+        
+            <div class="display-radio">
+              <div class="margin-radio">
+              <ion-radio slot="start" value="enfant"></ion-radio> 
+            </div>
+            <div class="margin-radio">
+              <ion-label class="font1">Enfant</ion-label>
+            </div>
+            </div>
+        
+            <div class="display-radio">
+              <div class="margin-radio">
+               <ion-radio slot="start" value="handicapé"></ion-radio> </div>
+            <div class="margin-radio">
+              <ion-label class="font1">Handicapé</ion-label>
+             </div>
+            </div>
+            <div class="display-radio">
+              <div class="margin-radio">
+               <ion-radio slot="start" value="police"></ion-radio> </div>
+               <div class="margin-radio">
+              <ion-label class="font1">Police</ion-label>
+             </div>
+            </div>
+          </ion-radio-group>
+        </div> -->
+        
+        <div class="font-margin">
+          <ion-label class="font-tarif"> <ion-icon name="logo-usd"></ion-icon> Tarif total (DT) : <ion-input [value]="finalPrice" disabled></ion-input> </ion-label>
+                
+        </div>
+      </div>
+      <div class="container-button">
+        <div class="center-button">
+          <button (click)="payer(item)" >Select</button>
+        </div>
+      </div>
+      <div class="button-margin">
+     
+      </div>
+      
+    </div>
+  </div>
+</ion-content>
+
+   

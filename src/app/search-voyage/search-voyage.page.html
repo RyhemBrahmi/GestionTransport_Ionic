@@ -1,0 +1,68 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary" no-border>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>
+     Rechercher Voyage
+    </ion-title>
+
+    <ion-buttons slot="end">
+      
+    </ion-buttons>
+    
+  </ion-toolbar>
+  <ion-searchbar type="text" debounce="500" (ionChange)="getItems($event)"></ion-searchbar>
+</ion-header>
+<ion-content>
+  <ion-searchbar type="text" debounce="500" (ionChange)="getItems($event)"></ion-searchbar>
+  
+  <div *ngIf="isItemAvailable">
+  <div class="container center" *ngFor="let item of searchedItem">
+  
+    <div class="card">
+      <h2>Ligne : {{item.ligne}} </h2>
+      <hr/>
+     
+        <div class="display"> 
+              
+         
+            <ion-label position="fixed" class="font">  <ion-icon name="location-outline"></ion-icon> Station départ : {{ item.stationdepart }}</ion-label>
+            <br>
+    
+            
+            <ion-label position="fixed" class="font" >  <ion-icon name="location"></ion-icon> Ville arrivée : {{ item.stationarrivee }} </ion-label> <br>
+         
+            <div class="tarif">
+              <ion-label position="fixed" class="font"> <ion-icon name="time"></ion-icon>
+                Heure départ : {{ item.heuredepart }}  </ion-label> <br>
+                <ion-label position="fixed" class="font"> <ion-icon name="time-outline"></ion-icon>
+                Heure arrivée : {{ item.heurearrivee }}  </ion-label> <br>  
+             </div>
+           <div class="tarif">
+            <ion-label position="fixed" class="font-tarif"><ion-icon name="logo-usd"></ion-icon>
+              Tarif : {{ item.tarifs }} DT </ion-label> <br>
+           </div>
+        
+            <ion-label position="fixed" class="font-place">Place disponible : {{ item.nombreplacedisponible }} </ion-label> <br>
+       
+         
+            <ion-label position="fixed" class="font-place">Place réservée : {{ item.nombreplacereservee }} </ion-label>
+         </div>
+    
+     
+      <div class="container-button">
+        <div class="center-button">
+          <button (click)=" ticket(item)" >Select</button>
+        </div>
+      </div>
+      <div class="button-margin">
+
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+</ion-content>
